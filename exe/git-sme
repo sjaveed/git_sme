@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'git_sme/cli'
+
+# Prepend analyze so we don't have to keep typing that on the commandline
+GitSme::CLI.start(ARGV.dup.unshift('analyze'))
