@@ -33,7 +33,7 @@ expertise:
 
     $ bundle exec git-sme ~/rails/dinghy --file ~/rails/dinghy/cli/dinghy/preferences.rb ~/rails/dinghy/cli/dinghy/machine.rb
     Repository: /Users/sjaveed/rails/dinghy
-    Analyzed: 317 (0/s) 100.00% Time: 00:00:00 |=======================================================================================================|
+    Analyzed: 317 (0/s) 100.00% Time: 00:00:00 |==============================================================================|
     
     /: brianp, ryan, brian, adrian.falleiro, sally, dev, markse, fgrehm, kallin.nagelberg, matt
     /cli: brianp, ryan, markse, sally, adrian.falleiro, fgrehm, matt, kallin.nagelberg, brian, dev
