@@ -7,7 +7,7 @@ require_relative 'cache'
 
 module GitSme
   class CommitLoader
-    attr_reader :valid, :error_message, :commits, :loaded, :repo
+    attr_reader :valid, :error_message, :branch, :commits, :loaded, :repo
 
     alias_method :valid?, :valid
     alias_method :loaded?, :loaded
@@ -21,9 +21,11 @@ module GitSme
 
       begin
         @repo = Rugged::Repository.new(File.expand_path(path_to_repo))
-        @branch = 'master' unless @repo.branches[@branch].nil?
+        @branch = 'master' if @repo.branches[@branch].nil?
 
-        @cache = GitSme::Cache.new(@repo.path.gsub('/.git/', ''), enabled: @enable_cache, file_suffix: "#{@branch}-commits")
+        @cache = GitSme::Cache.new(@repo.path.gsub('/.git/', ''),
+          enabled: @enable_cache, file_suffix: "#{@branch}-commits"
+        )
       rescue Rugged::RepositoryError => e
         @valid = false
         @error_message = e.message

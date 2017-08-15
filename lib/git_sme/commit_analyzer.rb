@@ -13,7 +13,9 @@ module GitSme
       @error_message = @commit_loader.error_message
 
       @analysis = {}
-      @cache = GitSme::Cache.new(@commit_loader.repo.path.gsub('/.git/', ''), enabled: @enable_cache, file_suffix: "#{@branch}-analysis")
+      @cache = GitSme::Cache.new(@commit_loader.repo.path.gsub('/.git/', ''),
+        enabled: @enable_cache, file_suffix: "#{@commit_loader.branch}-analysis"
+      )
     end
 
     def analyze(force: false)
