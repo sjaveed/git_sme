@@ -9,6 +9,7 @@ module GitSme
       @users = users
       @files = files
       @files = ['/'] unless @users.any? || @files.any?
+      @files.map! { |f| f.start_with?("/") ? "/#{f}" : f }
 
       @valid = @commit_analyzer.valid?
       @error_message = @commit_analyzer.error_message
