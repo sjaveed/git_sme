@@ -36,7 +36,7 @@ child of the folder you **do** provide it.
 are the subject matter experts on each of those paths.  Users are listed in decreasing order of
 expertise:
 
-    $ bundle exec git-sme ~/rails/dinghy --file ~/rails/dinghy/cli/dinghy/preferences.rb ~/rails/dinghy/cli/dinghy/machine.rb
+    $ bundle exec git-sme ~/rails/dinghy --file cli/dinghy/preferences.rb cli/dinghy/machine.rb
     Repository: /Users/sjaveed/rails/dinghy
     Analyzed: 317 (0/s) 100.00% Time: 00:00:00 |==============================================================================|
     
