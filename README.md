@@ -8,6 +8,11 @@ and directory.
 Commits are weighted so recent commits are more significant than past commits which should mitigate
 the effect a legacy coder would have on these reports.
 
+## Requirements
+
+- Ruby 2.4.x
+- cmake is required to build rugged dependency. On OSX `brew install cmake`.
+
 ## Installation
 
 Install the gem for commandline usage in the appropriate version of ruby:
